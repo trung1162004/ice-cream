@@ -1,0 +1,245 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Project
+build_property.RootNamespace = Project
+build_property.ProjectDir = C:\Users\ACER\Downloads\ProjectIceCream\ProjectIceCream\Project3\ProjectMain (2)\ProjectMain (2)\ProjectMain\ProjectMain\Project 3\Project\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\ACER\Downloads\ProjectIceCream\ProjectIceCream\Project3\ProjectMain (2)\ProjectMain (2)\ProjectMain\ProjectMain\Project 3\Project
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/BookTracking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQm9va1RyYWNraW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/CreateBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlQm9vay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/CreateRecipe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlUmVjaXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/DetailBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlsQm9vay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/DetailContact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlsQ29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/DetailFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlsRmVlZGJhY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/DetailRecipe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlsUmVjaXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/DetailURecipe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGV0YWlsVVJlY2lwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/DisplayBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGlzcGxheUJvb2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/DisplayContact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGlzcGxheUNvbnRhY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/DisplayFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGlzcGxheUZlZWRiYWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/DisplayPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGlzcGxheVBheW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/DisplayRecipe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGlzcGxheVJlY2lwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/DisplayURecipe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGlzcGxheVVSZWNpcGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/OrderDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cT3JkZXJEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/UpdateBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlQm9vay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/UpdateContact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlQ29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/UpdateFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlRmVlZGJhY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/UpdateRecipe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlUmVjaXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Admin/Users.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Book/Book.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xCb29rLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Book/BookDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va1xCb29rRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Cart/ViewCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxWaWV3Q2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Checkout/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcQ2hlY2tvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Checkout/Result.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcUmVzdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/DisplayPayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlzcGxheVBheW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Home/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Home/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Home/AddRecipe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRSZWNpcGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Home/ContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0VXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Home/DisplayFeedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaXNwbGF5RmVlZGJhY2suY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Home/FAQ.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGQVEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Home/Feedback.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGZWVkYmFjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Home/FreeRecipe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGcmVlUmVjaXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Home/OrderTracking.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPcmRlclRyYWNraW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Home/PremiumRecipe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcmVtaXVtUmVjaXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Package/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Package/PaymentFailed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZVxQYXltZW50RmFpbGVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Package/PaymentSuccess.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZVxQYXltZW50U3VjY2Vzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Package/Test.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZVxUZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Package/ViewPackage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFja2FnZVxWaWV3UGFja2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Shared/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/User/ChangePassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/User/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/User/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/User/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/User/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ACER/Downloads/ProjectIceCream/ProjectIceCream/Project3/ProjectMain (2)/ProjectMain (2)/ProjectMain/ProjectMain/Project 3/Project/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-9q8ibpt6yd

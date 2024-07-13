@@ -1,0 +1,46 @@
+﻿@model Project.Models.ContactU
+
+@{
+    ViewData["Title"] = "Detail";
+    Layout = "_LayoutAdmin";
+}
+<header>
+    <link rel="stylesheet" href="~/css/AdminRecipe.css" />
+</header>
+<h1>Detail Ice Cream Feedback</h1>
+<p>@ViewBag.msg</p>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+
+
+    </dl>
+</div>
+<div>
+    <a asp-action="DisplayContact" class="btn btn-primary">Back to List</a>
+
+</div>

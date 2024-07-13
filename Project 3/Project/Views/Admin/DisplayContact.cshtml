@@ -1,0 +1,87 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+
+@model X.PagedList.IPagedList<Project.Models.ContactU>
+
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "_LayoutAdmin";
+}
+
+<header>
+    <link rel="stylesheet" href="~/css/AdminRecipe.css" />
+</header>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+<h1 class="tieude">List User's Contact</h1>
+<br />
+<div class="search-create-container">
+    <form class="search-form" asp-action="DisplayContact" asp-controller="Admin" method="get">
+        <input type="text" name="contactName" class="search-input" placeholder="Enter user name..." />
+        <input type="submit" value="Search" class="search-button" />
+    </form>
+
+</div>
+<div class="d-flex justify-content-between">
+    <div>
+        <a asp-controller="Admin" asp-action="ExportToExcelContact" class="btn btn-primary">Export to Excel</a>
+
+    </div>
+    <div></div>
+    <div>
+        <a asp-action="DisplayContact" asp-route-sortOrder="@ViewData["NameSortParam"]" class="btn btn-primary">Sort by name</a>
+    </div>
+</div>
+
+<p>@ViewBag.msg</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Phone
+            </th>
+            <th>
+                Content
+            </th>
+            <th>
+                Status
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Content)
+                </td>
+                <td>
+                    @*<a class="delete-button" href="@Url.Action("DeleteContact","Admin", new { id = item.ContactId })" onclick="return confirm('Are you sure you want to delete this contact?')">Remove</a>*@
+                    <a class="detail-button" href="@Url.Action("DetailContact","Admin", new { ContactID = item.ContactId })">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="pag">
+@Html.PagedListPager(Model, page => Url.Action("DisplayContact", new { page, sortOrder = ViewBag.SortOrder }))
+</div>

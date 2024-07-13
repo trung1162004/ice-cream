@@ -1,0 +1,21 @@
+﻿.login-bg {
+    background-image: url(https://images3.alphacoders.com/133/1331771.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px 50px;
+}
+.login-bg2 {
+    background-image: url(https://images2.alphacoders.com/132/1323083.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px 50px;
+}
+.login-bg3 {
+    background-image: url(https://images3.alphacoders.com/132/1325210.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px 50px;
+}
+.login-text {
+    font-family: "Sofia", sans-serif;
+}

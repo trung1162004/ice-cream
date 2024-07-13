@@ -1,0 +1,79 @@
+﻿@model Project.Models.Recipe
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "_LayoutAdmin";
+}
+<header>
+    <link rel="stylesheet" href="~/css/AdminRecipe.css" />
+</header>
+<div class="update-page">
+    <h1>Update Ice Cream Recipe</h1>
+
+    <p>@ViewBag.msg</p>
+    <hr />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-12">
+                <form asp-action="UpdateRecipe" asp-controller="Admin" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input asp-for="RecipeId" class="form-control" type="hidden"/>
+                    <div class="form-group">
+                        <label asp-for="RecipeName" class="control-label"></label>
+                        <input asp-for="RecipeName" class="form-control" />
+                        <span asp-validation-for="RecipeName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Images" class="control-label"></label>
+                        <img id="previewImage" src="~/@Model.Images" width="200" height="200">
+                        <input type="file" id="fileInput" name="file" class="form-control" multiple />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Ingredients" class="control-label"></label>
+                        <textarea asp-for="Ingredients" class="form-control"></textarea>
+                        <span asp-validation-for="Ingredients" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Procedure" class="control-label"></label>
+                        <textarea asp-for="Procedure" class="form-control"></textarea>
+                        <span asp-validation-for="Procedure" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IsEnabled" class="control-label"></label>
+                        <input asp-for="IsEnabled" class="form-control" />
+                        <span asp-validation-for="IsEnabled" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Update" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    <div>
+        <a asp-action="DisplayRecipe">Back to List</a>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Xử lý sự kiện khi người dùng chọn tập tin mới
+        $("#fileInput").change(function () {
+            // Đọc tập tin hình ảnh
+            var fileInput = document.getElementById('fileInput');
+            var file = fileInput.files[0];
+
+            // Kiểm tra nếu có tập tin được chọn
+            if (file) {
+                // Tạo đường dẫn hình ảnh tạm thời để xem trước
+                var temporaryUrl = URL.createObjectURL(file);
+
+                // Hiển thị hình ảnh xem trước
+                $("#previewImage").attr("src", temporaryUrl);
+            }
+        });
+    });
+</script>

@@ -1,0 +1,101 @@
+﻿@model IEnumerable<Project.Models.BookCombined>
+@{
+    ViewData["Title"] = "Order Tracking";
+}
+
+<body>
+    <div class="shell">
+        
+        <section class="">
+        <div class="container">
+         
+            <div class="row">
+
+            
+
+                @if (Model.Any()) // Check if the Model contains any items
+                {
+                    @foreach (var item in Model)
+                    {
+
+                        <div class="card card-stepper" style="border-radius: 16px;">
+                            <div class="card-header p-4">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <p class="text-muted mb-0"> Place On <span class="fw-bold text-body">@item.Order.OrderDate</span> </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="card-body p-4">
+                                <div class="d-flex flex-row mb-4 pb-2">
+                                    <div class="flex-fill">
+                                        <h3>Order Details:</h3>
+                                        <h5 class="fw-semibold">Book Title: @item.Book.Name</h5>
+                                        <p class="text-muted"> Quantity:  @item.OrderItem.Quantity item</p>
+                                        <h4 class="mb-3"> Price: $@item.OrderItem.Total <span class="smaller text-muted"> via (COD) </span></h4>
+                                        <hr width="80%" />
+                                        <h3>User Details:</h3>
+                                        <p class="text-muted"> Name:  @item.Order.Name</p>
+                                        <p class="text-muted"> Email:  @item.Order.Email</p>
+                                        <p class="text-muted"> Phone:  @item.Order.Phone</p>
+                                        <p class="text-muted"> Address:  @item.Order.Address</p>
+                                    </div>
+                                    <div>
+                                        <img class="align-self-center img-fluid"
+                                             src="~/@item.Book.Images" width="250">
+                                    </div>
+                                </div>
+                                <div class="text-center"><h4>Order Status</h4></div>
+
+                                <ul class="progressbar-1 mx-0 mt-0 mb-5 px-0 pt-0 pb-4 text-center text-sty">
+                                    <li class="step0 active list-unstyled" id="step1"><span id="statusSpan" class="btn btn-dark"> @item.Order.Status</span></li>
+                                </ul>
+                            </div>
+                            <div class="card-footer p-4">
+                                <div class="text-center text-muted">
+                                    Privacy &reg; ensured by IceJ Company
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="text-center text-danger">
+                        <h2>There is no order</h2>
+                    </div>
+                }
+
+
+            </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>document.addEventListener("DOMContentLoaded", function () {
+        var statusSpan = document.getElementById("statusSpan");
+
+        if (statusSpan) {
+            var status = statusSpan.innerText.trim();
+
+            switch (status) {
+                case "Pending":
+                    statusSpan.style.color = "orange";
+                    break;
+                case "Delivering":
+                    statusSpan.style.color = "yellow";
+                    break;
+                case "Delivered":
+                    statusSpan.style.color = "green";
+                    break;
+                case "Reject":
+                    statusSpan.style.color = "red";
+                    break;
+                // Add other cases as needed
+                default:
+                    // Use a default color if the status doesn't match any specific case
+                    statusSpan.style.color = "black";
+            }
+        }
+    });</script>

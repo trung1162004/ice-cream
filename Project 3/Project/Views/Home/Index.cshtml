@@ -1,0 +1,171 @@
+﻿@model IEnumerable<Project.Models.Recipe>
+@{
+    ViewData["Title"] = "Home Page";
+
+}
+
+<body>
+    <!-- Gallery -->
+   <div class="shell">
+    <div class="container text-center">
+        <div class="nav-item animation2">
+            <img width="100" id="iceImage" height="80" src="~/Images/ice2.png">
+        </div>
+        <span class="span-p mt-3">
+
+            Uncle John Ice-cream Shop
+        </span>
+
+
+    </div>
+    <h1 class="text-center text-dark ad-text1 ">Welcome to our lovely Ice-cream Shop!</h1>
+    <div class="container">
+
+        <div class="row">
+          
+            <i>
+                
+                <figcaption class="blockquote-footer text-center mt-2">
+                    'Welcome to our scoop of happiness, where every flavor tells a story and each cone is a journey into pure delight. At <i class="text-uncle"> Uncle John Ice-Cream shop</i>, we don't just serve ice cream; we serve smiles, memories, and the sweetest moments of your life.
+                    Indulge in a symphony of flavors that dance on your taste buds, and let every scoop transport you to a world where joy is served one delightful bite at a time.'</cite>
+                </figcaption>
+            </i>
+            <div class="col-lg-4 col-md-10 mb-4 mb-lg-0">
+                <img src=" https://i.pinimg.com/474x/fc/82/fc/fc82fc7f648e815f20b972adccd9e292.jpg"
+                     class="w-100 shadow-1-strong rounded mb-4" />
+
+                <img src="https://i.pinimg.com/474x/57/eb/2b/57eb2bfd65bd31567b1efb8da28c97c5.jpg"
+                     class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="https://i.pinimg.com/474x/74/7c/9c/747c9c4250295b034ab9a07967c9d2f3.jpg"
+                     class="w-100 shadow-1-strong rounded mb-4" />
+
+                <img src="https://i.pinimg.com/474x/f1/55/4b/f1554bf76733f3f258f329a45333cc0d.jpg"
+                     class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <img src="https://i.pinimg.com/474x/c4/e1/8a/c4e18a38d68224e930ab3e7d95f97ae2.jpg"
+                     class="w-100 shadow-1-strong rounded mb-4" />
+
+                <img src="https://i.pinimg.com/474x/eb/64/2f/eb642f2875b617d7c69c797b474191b6.jpg"
+                     class="w-100 shadow-1-strong rounded mb-4" />
+            </div>
+        </div>
+    </div>
+    <!-- Gallery -->
+    <!-- end beginning  -->
+
+    <div class="shell">
+
+        <h1 class="text-center text-dark ad-text1 ">Free Recipe</h1>
+        <i>
+            <figcaption class="blockquote-footer text-center mt-2">
+                'We also welcome unregisterd customer to explore our free recipe'</cite>
+            </figcaption>
+        </i>
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model)
+                    {
+              @if (item.IsEnabled!.Contains("Free")) {
+                    <div class="col-md-3">
+
+                        <div class="wsk-cp-product">
+                            <div class="wsk-cp-img">
+                                @if (item.IsEnabled!.Contains("Signature"))
+                                    {
+                                    <span class="badge bg-warning">Signature</span>
+                                    }
+                                <img src=~/@item.Images alt="Product" class="img-responsive" />
+                            </div>
+                            <div class="wsk-cp-text">
+                                <a asp-controller="Home" asp-action="FreeRecipe">
+                                <div class="category">
+                                    <span>See Full Recipe</span>
+                                </div>
+                                </a>
+                                <div class="title-product">
+                                    <h3>@item.RecipeName</h3>
+                                </div>
+                                <div class="description-prod">
+                                    <p>@item.Ingredients</p>
+                                </div>
+                                <div class="card-footer">
+
+                                    <div class="wcf-right"><a href="#" class="buy-btn"><i class="zmdi zmdi-shopping-basket"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+    }
+                    }
+                </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    <!-- End card  -->
+
+
+
+
+    <div class="container mb-4">
+        <h1 class="text-center text-dark ad-text1 mb-4 ">Uncle John and his creative team</h1>
+        <i>
+            <figcaption class="blockquote-footer text-center">
+                'In the sweet symphony of frozen dreams, our founder's passion ignited the spark, and together with our dedicated employees, we craft each scoop with a symphony of flavors, turning moments into memories,
+                and every cone into a celebration of frozen passion.'
+            </figcaption>
+        </i>
+    </div>
+
+    <div class="d-flex justify-content-start">
+        <div class="container img1">
+
+            <img class="img2 img-fluid" src="https://i.pinimg.com/474x/b8/39/6a/b8396ae14a3b9cb506668dabdd462cfd.jpg" alt="">
+            <img class="img2 img-fluid" src="https://i.pinimg.com/474x/3e/79/b2/3e79b21d5274ade79d0147209d007351.jpg" alt="">
+            <img class="img2 img-fluid" src="https://i.pinimg.com/474x/88/d2/2e/88d22ecfab93dac7e7bbb3e4358c3c0d.jpg" alt="">
+        </div>
+    </div>
+
+
+
+
+    <!-- End ads -->
+    <div class="container-fluid content-1">
+        <div class="container">
+            <div id="carousel" height="500" class="bg-carousel mt-5">
+                <h1 class="text-center text-dark ad-text1 mb-4 ">Signature Ice-creams</h1>
+                <figure id="spinner">
+                    @foreach (var item in Model)
+                        {
+                        @if (item.IsEnabled!.Contains("Signature"))
+                            {
+                            <img src=~/@item.Images height="300" width="200">
+                         
+                                }
+                            }
+                        </figure>
+            </div>
+            <span style="float:left; color:chocolate;" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
+            <span style="float:right; color:chocolate;" class="ss-icon" onclick="galleryspin('')">&gt;</span>
+        </div>
+    </div>
+</body>
+
+<script>var angle = 0;
+    function galleryspin(sign) {
+        spinner = document.querySelector("#spinner");
+        if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
+        spinner.setAttribute("style", "-webkit-transform: rotateY(" + angle + "deg); -moz-transform: rotateY(" + angle + "deg); transform: rotateY(" + angle + "deg);");
+    }</script>
+
+

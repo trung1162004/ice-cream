@@ -1,0 +1,197 @@
+﻿@{
+    ViewData["Title"] = "Feedback";
+
+}
+
+<body>
+    <div class="shell">
+        <div class="btn-group btn-breadcrumb">
+            <a asp-action="Index" asp-controller="Home" class="btn btn-default"><i class="fas fa-home"></i></a>
+            <a asp-action="FAQ" asp-controller="Home" class="btn btn-default">FAQ</a>
+
+        </div>
+        <div class="container text-center mb-3">
+
+            <span class="span-p">
+                FAQ Page
+            </span>
+
+
+        </div>
+        <h1 class="text-center text-dark ad-text1 ">These are faq page that could answer your wondering!</h1>
+        <div class="faq_area section_padding_130" id="faq">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-8 col-lg-6">
+                        <!-- Section Heading-->
+                        <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                            <h3><span>Frequently </span> Asked Questions</h3>
+                            <p>1. Ingredients &amp; How to choose the good one?</p>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <!-- FAQ Area-->
+                    <div class="col-12 col-sm-10 col-lg-8">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        What factors should I consider when choosing ingredients for a recipe?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        When selecting ingredients for a recipe,<strong>consider their freshness, quality, and origin</strong> . Look for vibrant colors, firm textures, and check for any signs of spoilage. Additionally, choose seasonal produce for optimal flavor and nutritional value.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        How do I choose the best fruits to incorporate into my homemade ice cream for optimal flavor?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        For the best fruit flavor in homemade ice cream, choose ripe and in-season fruits. Berries, peaches, and mangoes are excellent choices. Ensure the fruits are firm, vibrant in color, and free from bruises. Consider macerating fruits in sugar beforehand to enhance their natural sweetness.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        What role do sweeteners play in making ice cream, and how should I choose the right ones?
+
+
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Sweeteners in ice cream contribute to its overall sweetness. When selecting sweeteners, consider options like cane sugar, honey, or maple syrup. Experiment with quantities to achieve the desired sweetness level. Be cautious with artificial sweeteners, as they can affect the texture and flavor of the ice cream.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- second  -->
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-sm-8 col-lg-6">
+                            <!-- Section Heading-->
+                            <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                <h3><span>Frequently </span> Asked Questions</h3>
+                                <p>2. Difficulties in making ice-cream at home</p>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-10 col-lg-8">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="flase" aria-controls="collapseOne1">
+                                        What are common challenges faced when making ice cream at home, especially without an ice cream maker?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne1" class="accordion-collapse collapse" aria-labelledby="headingOne1" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        One common challenge is achieving the desired creaminess without an ice cream maker. The lack of churning may result in ice crystals forming, impacting the texture. To overcome this, try frequent manual stirring during the freezing process or consider alternative methods like using a blender.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo2">
+                                    <button class="accordion-button  " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="true" aria-controls="collapseTwo2">
+                                        How can one address the issue of ice cream turning too icy or hard after freezing?
+
+
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo2" class="accordion-collapse collapse show" aria-labelledby="headingTwo2" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        The problem of ice cream becoming excessively icy or hard can be mitigated by incorporating ingredients with lower freezing points, such as alcohol or sweeteners like honey. Additionally, using a higher fat content in the base recipe can contribute to a smoother texture.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree3" aria-expanded="false" aria-controls="collapseThree3">
+                                        What challenges might arise when adding mix-ins or swirls to homemade ice cream, and how can they be overcome?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree3" class="accordion-collapse collapse" aria-labelledby="headingThree3" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Incorporating mix-ins or swirls can pose challenges, as they may not distribute evenly or could become too hard. To address this, partially freeze the base before adding mix-ins. Swirls can be achieved by layering the mix-ins and gently folding them into the base. Experimentation and patience are key to mastering this technique.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- third  -->
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-sm-8 col-lg-6">
+                            <!-- Section Heading-->
+                            <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                <h3><span>Frequently </span> Asked Questions</h3>
+                                <p>3. Tools that neccessary in making ice-cream</p>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-10 col-lg-8">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne4" aria-expanded="flase" aria-controls="collapseOne4">
+                                        What essential tools do I need to make ice cream at home?
+                                    </button>
+                                </h2>
+                                <div id="collapseOne4" class="accordion-collapse collapse" aria-labelledby="headingOne4" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        To make ice cream at home, you'll need an ice cream maker, which helps churn the mixture to achieve a creamy texture. Additionally, basic tools like a mixing bowl, whisk, and spatula are necessary for preparing the ice cream base and incorporating ingredients.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo5">
+                                    <button class="accordion-button  " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo5" aria-expanded="true" aria-controls="collapseTwo5">
+                                        Can I make ice cream without an ice cream maker, and what alternatives can I use?
+
+
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo5" class="accordion-collapse collapse show" aria-labelledby="headingTwo5" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        While an ice cream maker is ideal, it's possible to make ice cream without one. You can use a sturdy mixing bowl, a hand mixer, or a blender to manually churn the mixture. Make sure to place the mixture in the freezer, stirring it every 30 minutes to prevent ice crystals from forming.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingThree6">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree6" aria-expanded="false" aria-controls="collapseThree3">
+                                        Are there any specialized tools that enhance the ice cream-making process?
+                                    </button>
+                                </h2>
+                                <div id="collapseThree6" class="accordion-collapse collapse" aria-labelledby="headingThree3" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        Yes, specialized tools can enhance the process. A digital kitchen thermometer helps monitor the temperature of the ice cream base, ensuring it reaches the right consistency. Silicone spatulas are useful for scraping down the sides of the mixing bowl, and storage containers with tight-sealing lids help prevent freezer burn.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support Button-->
+                    <div class="support-button text-center d-flex align-items-center justify-content-center mt-4 wow fadeInUp" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                        <i class="lni-emoji-sad"></i>
+                        <p class="mb-0 px-2">Can't find your answers?</p>
+                        <a asp-action="ContactUs" asp-controller="Home"> Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

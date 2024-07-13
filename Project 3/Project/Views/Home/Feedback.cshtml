@@ -1,0 +1,84 @@
+﻿@model Project.Models.Feedback;
+@{
+    ViewData["Title"] = "Feedback";
+
+}
+ 
+
+<body>
+   
+    <div class="shell">
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success" role="alert">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+        @if (!ViewData.ModelState.IsValid)
+        {
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach (var key in ViewData.ModelState.Keys)
+                    {
+                        @foreach (var error in ViewData.ModelState[key].Errors)
+                        {
+                            <li>@error.ErrorMessage</li>
+                        }
+                    }
+                </ul>
+            </div>
+        }
+
+        <div class="btn-group btn-breadcrumb">
+            <a asp-action="Index" asp-controller="Home" class="btn btn-default"><i class="fas fa-home"></i></a>
+            <a asp-action="DisplayFeedback" asp-controller="Home" class="btn btn-default">Feedback</a>
+            <a asp-action="Feedback" asp-controller="Home" class="btn btn-default">Feedback Form</a>
+
+        </div>
+        <div class="container text-center mb-3">
+
+            <span class="span-p">
+                Send your feedback to us!
+            </span>
+
+
+        </div>
+        <div class="main-bd">
+
+            <div class="container sub-bd">
+
+                <h2>Feedback form</h2>
+                <form class="form-fb" asp-action="Feedback" asp-controller="Home">
+                    <div class="">
+                        <label asp-for="Name" class="form-label-fb">Name:</label>
+                        <input type="text" asp-for="Name" class="form-control-fb" id="name" placeholder="Enter your name" value="@Context.Session.GetString("name")">
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="">
+                        <label asp-for=" Email" class="form-label-fb"></label>
+                        <input type="email" class="form-control-fb" asp-for=" Email" placeholder="Enter your email" value="@Context.Session.GetString("email")">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+
+
+                    </div>
+                    <div class="">
+                        <label asp-for=" FeedbackText" class="form-label-fb"></label>
+                        <textarea class="form-control-fb-text" asp-for=" FeedbackText" rows="10" placeholder="Enter your message"></textarea>
+                        <span asp-validation-for="FeedbackText" class="text-danger"></span>
+
+                    </div>
+                    <div class="">
+                        <label asp-for=" FeedbackDate" class="form-label-fb"></label>
+                        <input type="text" class="form-control-fb" asp-for=" FeedbackDate" value="@DateTime.Now.Date" placeholder="The feedback date" readonly>
+                    </div>
+                    <input type="submit" class="submit-button" />
+                </form>
+            </div>
+        </div>
+
+</body>
+
+
+
+
+

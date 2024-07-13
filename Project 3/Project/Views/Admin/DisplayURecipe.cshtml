@@ -1,0 +1,51 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+
+@model X.PagedList.IPagedList<Project.Models.Recipe>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutAdmin";
+}
+<header>
+    <link rel="stylesheet" href="~/css/AdminRecipe.css" />
+</header>
+<h1 class="tieude">List Ice Cream Recipe Of Users</h1>
+<br />
+<p>@ViewBag.msg</p>
+<form class="search-form" asp-action="DisplayURecipe" asp-controller="Admin" method="get">
+    <input type="text" name="recipeUserName" class="search-input" placeholder="Enter reicpe name..." />
+    <input type="submit" value="Search" class="search-button" />
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                RecipeName
+            </th>
+            <th>
+                Images
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RecipeName)
+                </td>
+                <td>
+                    <img src="~/@item.Images" width="120" />
+                </td>
+                <td class="action-buttons-container">
+                    <a class="detail-button" href="@Url.Action("DetailURecipe","Admin", new { RecipeID = item.RecipeId })">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="pag">
+@Html.PagedListPager(Model, page => Url.Action("DisplayURecipe", new { page, recipeUserName = ViewBag.RecipeUserName }))
+</div>

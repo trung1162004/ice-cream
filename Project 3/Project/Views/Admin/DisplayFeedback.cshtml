@@ -1,0 +1,88 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+
+@model X.PagedList.IPagedList<Project.Models.Feedback>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutAdmin";
+}
+
+<header>
+    <link rel="stylesheet" href="~/css/AdminRecipe.css" />
+</header>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+<h1 class="tieude">List User's Feedback</h1>
+<br />
+<form method="get" class="search-form" action="@Url.Action("DisplayFeedback")">
+    <input type="text" name="searchName" id="searchName" class="search-input" placeholder="Enter name" />
+    <button type="submit" class="search-button">Search</button>
+</form>
+<div class="d-flex justify-content-between">
+    <div>
+        <a asp-controller="Admin" asp-action="ExportToExcel" class="btn btn-primary">Export to Excel</a>
+
+    </div>
+    <div></div>
+    <div>
+        <a asp-action="DisplayFeedback" asp-route-sortOrder="@ViewData["DateSortParam"]" class="btn btn-primary">Sort by date</a>
+        <a asp-action="DisplayFeedback" asp-route-sortOrder="@ViewData["NameSortParam"]" class="btn btn-primary">Sort by name</a>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                User Name
+            </th>
+            <th>
+                User Email
+            </th>
+            <th>
+                Feedback Content
+            </th>
+            <th>
+                Sent Date
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FeedbackText)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FeedbackDate)
+                </td>
+                <td>
+                 
+                    <a class="detail-button" href="@Url.Action("DetailFeedback","Admin", new { FeedbackID = item.FeedbackId })">Details</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<div class="pag">
+@Html.PagedListPager(Model, page => Url.Action("DisplayFeedback", new { page, sortOrder = ViewBag.SortOrder }))
+</div>

@@ -1,0 +1,57 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+@model X.PagedList.IPagedList<Project.Models.Identity.AppUser>
+
+@{
+    ViewData["Title"] = "Users";
+    Layout = "_LayoutAdmin";
+}
+<header>
+    <link rel="stylesheet" href="~/css/AdminRecipe.css" />
+</header>
+<h1 class="tieude">List Users</h1>
+<br />
+<div class="search-create-container">
+    <form class="search-form" asp-action="Users" method="get">
+        <input type="text" class="search-" name="name" placeholder="enter name...." />
+        <input type="submit" class="search-button" value="search" />
+    </form>
+</div>
+<div>
+    <div>
+        <a asp-controller="Admin" asp-action="ExportToExcel11" class="btn btn-primary">Export to Excel</a>
+
+    </div>
+</div>
+<div class="card">
+    <h5 class="card-header">Users</h5>
+    <div class="card-body">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Username</th>
+                    <th>Full name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.UserName</td>
+                        <td>@item.FullName</td>
+                        <td>@item.PhoneNumber</td>
+                        <td>@item.Email</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div class="pag">
+            @Html.PagedListPager(Model, page => Url.Action("Users", new { page, name = ViewContext.HttpContext.Request.Query["name"] }))
+
+        </div>
+    </div>
+</div>

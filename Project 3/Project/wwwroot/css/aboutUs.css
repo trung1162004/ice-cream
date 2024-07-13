@@ -1,0 +1,41 @@
+﻿.icon-about {
+    color: burlywood !important;
+}
+.social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+ 
+.social-link:hover,
+.social-link:focus {
+    background: #ddd;
+    text-decoration: none;
+    color: #555;
+}
+
+.contact-img {
+    height: 50%;
+    width: 80%;
+    border-radius: 10% 30% 50% 70%;
+}
+
+.contact-img2 {
+    height: 50%;
+    width: 80%;
+    border-radius: 50% 20% / 10% 40%;
+}
+
+.title-contact {
+    font-style: oblique;
+    color: burlywood;
+    font-weight: bolder;
+}

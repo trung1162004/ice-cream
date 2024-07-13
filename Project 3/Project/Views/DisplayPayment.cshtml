@@ -1,0 +1,75 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+
+@model X.PagedList.IPagedList<Project.Models.PaymentInfo>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutAdmin";
+}
+<header>
+    <link rel="stylesheet" href="~/css/AdminRecipe.css" />
+</header>
+<h1 class="tieude">List Ice Cream Recipe Of Users</h1>
+<br />
+<p>@ViewBag.msg</p>
+<form class="search-form" asp-action="DisplayPayment" asp-controller="Admin" method="get">
+    <input type="text" name="searchString" class="search-input" placeholder="Enter paymentid or  name user..." />
+    <input type="submit" value="Search" class="search-button" />
+</form>
+<div class="d-flex justify-content-between">
+    <div>
+        <a asp-controller="Admin" asp-action="ExportToExcel1122" class="btn btn-primary">Export to Excel</a>
+
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                PaymentId
+            </th>
+            <th>
+               Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                PackageType
+            </th>
+            <th>
+                CreatedDate
+            </th>
+            <th>
+                ExpiryDate
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaymentId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PackageType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExpiryDate)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.PagedListPager(Model, page => Url.Action("DisplayPayment", new { page, recipeUserName = ViewBag.RecipeUserName }))

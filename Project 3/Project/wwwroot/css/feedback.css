@@ -1,0 +1,64 @@
+﻿.main-bd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.form-fb {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-bd {
+    width: 500px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.44);
+    background-color: #ffffff;
+}
+
+h2 {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #CC6666;
+}
+
+.form-label-fb {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #CC6666;
+    padding: 10px;
+}
+
+.form-control-fb {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.44);
+    width: 100%;
+    height: 40px;
+    border: 0.5px solid #CC6666;
+    border-radius: 10px;
+}
+.form-control-fb-text {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.44);
+    width: 100%;
+    height: 60px;
+    border: 0.5px solid #CC6666;
+    border-radius: 10px;
+}
+
+.submit-button {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px;
+    width: 25%;
+    background-color: #CC6666;
+    border: 2px solid #CC6666;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+    .submit-button:hover {
+        width: 23%;
+        background-color: #CC4949;
+        color: white;
+        border: 2px solid #ffffff;
+    }

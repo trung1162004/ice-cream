@@ -1,0 +1,46 @@
+﻿<Properties StartupConfiguration="{8188AAB3-434D-4FA7-B2DB-AB48F1849475}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Project PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Project/Controllers/AdminController.cs">
+    <Files>
+      <File FileName="Project/appsettings.json" />
+      <File FileName="Project/Views/User/Login.cshtml" />
+      <File FileName="Project/wwwroot/css/login.css" />
+      <File FileName="Project/Views/User/Profile.cshtml" />
+      <File FileName="Project/Views/Home/FreeRecipe.cshtml" />
+      <File FileName="Project/Views/Home/PremiumRecipe.cshtml" />
+      <File FileName="Project/Views/Home/AddRecipe.cshtml" />
+      <File FileName="Project/Controllers/HomeController.cs" Line="240" Column="18" />
+      <File FileName="Project/Views/Home/OrderTracking.cshtml" />
+      <File FileName="Project/Views/Home/Feedback.cshtml" />
+      <File FileName="Project/Controllers/CartController.cs" />
+      <File FileName="Project/Controllers/AdminController.cs" Line="607" Column="1" />
+      <File FileName="Project/Controllers/BookController.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Project" expanded="True">
+            <Node name="Project" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="AdminController.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="User" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

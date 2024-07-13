@@ -1,0 +1,64 @@
+﻿@model Project.Models.Book
+
+@{
+    ViewData["Title"] = "BookDetail";
+}
+<div class="shell">
+<div class="wrapper box-layout">
+
+    <!-- Product Shop Section Begin -->
+    <div class="page-main-wrapper pb-20">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-4">
+                    <div class="product-pic-zoom">
+                        <img class="product-big-img" src="~/@Model.Images"
+                            alt="" height="400px">
+
+                    </div>
+                    
+                </div>
+                <div class="col-md-6 ">
+                    <div class="product-details">
+                        <div class="pd-title">
+                            <span></span>
+                            <h3>@Model.Name</h3>
+                            <a href="#" class="heart-icon"><i class="icon_heart_alt"></i></a>
+                        </div>
+                        
+                        <div class="pd-desc">
+                            <p>@Model.Description</p>
+                            @if (Model.Discount != null)
+                            {
+                                <h4>$@Model.Discount <span>$@Model.Price</span></h4>
+                            }
+                            else
+                            {
+                                <h4>$@Model.Price</h4>
+                            }
+                        </div>
+
+                        @if (@Model.Quantity > 0)
+                        {
+                            <div class="quantities">
+                                <div class="quantity">
+                                    <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@Model.BookId" class="pri-btn pd-cart">Add To Cart</a>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="quantities">
+                                <div class="quantity">
+                                    <a class="pri-btn pd-cart">Out of Stock</a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Product Shop Section End -->
+</div>

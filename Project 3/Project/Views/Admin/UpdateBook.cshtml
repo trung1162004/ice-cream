@@ -1,0 +1,90 @@
+﻿@model Project.Models.Book
+
+@{
+    ViewData["Title"] = "UpdateBook";
+    Layout = "_LayoutAdmin";
+}
+
+<header>
+    <link rel="stylesheet" href="~/css/AdminRecipe.css" />
+</header>
+<div class="update-page">
+    <h1>Update Ice Cream Book</h1>
+
+    <p>@ViewBag.msg</p>
+    <hr />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-12">
+                <form asp-action="UpdateBook" asp-controller="Admin" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <input asp-for="BookId" type="hidden" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Slug" class="control-label"></label>
+                        <input asp-for="Slug" class="form-control" />
+                        <span asp-validation-for="Slug" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Images" class="control-label"></label>
+                        <img id="previewImage" src="~/@Model.Images" width="200" height="200">
+                        <input type="file" id="fileInput" name="file" class="form-control" multiple />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Description" class="control-label"></label>
+                        <textarea asp-for="Description" class="form-control"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Price" class="control-label"></label>
+                        <input asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Discount" class="control-label"></label>
+                        <input asp-for="Discount" class="form-control" />
+                        <span asp-validation-for="Discount" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Quantity" class="control-label"></label>
+                        <input asp-for="Quantity" class="form-control" />
+                        <span asp-validation-for="Quantity" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Update" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div>
+    <a asp-action="DisplayBook" asp-controller="Admin">Back to List</a>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Xử lý sự kiện khi người dùng chọn tập tin mới
+        $("#fileInput").change(function () {
+            // Đọc tập tin hình ảnh
+            var fileInput = document.getElementById('fileInput');
+            var file = fileInput.files[0];
+
+            // Kiểm tra nếu có tập tin được chọn
+            if (file) {
+                // Tạo đường dẫn hình ảnh tạm thời để xem trước
+                var temporaryUrl = URL.createObjectURL(file);
+
+                // Hiển thị hình ảnh xem trước
+                $("#previewImage").attr("src", temporaryUrl);
+            }
+        });
+    });
+</script>

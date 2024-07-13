@@ -1,0 +1,60 @@
+﻿@model Project.Models.ContactU
+
+@{
+    ViewData["Title"] = "Update";
+    Layout = "_LayoutAdmin";
+}
+<header>
+    <link rel="stylesheet" href="~/css/AdminRecipe.css" />
+</header>
+<div class="update-page">
+    <h1>Update Feedback</h1>
+
+    <p>@ViewBag.msg</p>
+    <hr />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-12">
+                <form asp-action="UpdateContact" asp-controller="Admin" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input asp-for="ContactId" class="form-control" type="hidden" />
+                    <div class="form-group">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <textarea asp-for="Email" class="form-control"></textarea>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Phone" class="control-label"></label>
+                        <textarea asp-for="Phone" class="form-control"></textarea>
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Content" class="control-label"></label>
+                        <input asp-for="Content" class="form-control" />
+                        <span asp-validation-for="Content" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div>
+    <a asp-action="DisplayContact" class="btn btn-primary">Back to List</a>
+</div>
+
+@*@section Scripts {
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    }*@

@@ -1,0 +1,123 @@
+﻿@model IEnumerable<Project.Models.Recipe>
+@{
+    ViewData["Title"] = "Free Recipe";
+}
+
+
+<body>
+
+
+    <div class="shell">
+        <div class="btn-group btn-breadcrumb">
+            <a asp-action="Index" asp-controller="Home" class="btn btn-default"><i class="fas fa-home"></i></a>
+            <a asp-action="FreeRecipe" asp-controller="Home" class="btn btn-default">Free Recipe</a>
+        </div>
+        <div class="container text-center mb-3">
+            <span class="span-p">Free Ice-Cream Recipes</span>
+        </div>
+
+        <h1 class="text-center text-dark ad-text1 ">We would like to offer free limit recipes even when you did not register</h1>
+        <a href="#" class="m-4">
+            <p class="text-center register">Want to see more special recipes? Click here to register now!!!</p>
+        </a>
+
+        <div class="container mt-3">
+            <div class="d-flex justify-content-around">
+                <div></div>
+                <div class="flex-grow-1">
+                    <form method="get" class="search-form" action="@Url.Action("FreeRecipe")">
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" name="searchName" id="searchName" class="form-control search-input" placeholder="Enter name" />
+                            </div>
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary search-button">Search</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div>
+                    @using (Html.BeginForm("FreeRecipe", "Home", FormMethod.Get, new { id = "recipeForm" }))
+                    {
+                        <label for="sortOption">Sort By:</label>
+                        @Html.DropDownList("sortOption", new SelectList(new[]
+                                          {
+                            new { Value = "", Text = "None" },
+                            new { Value = "Name", Text = "Name" },
+                            new { Value = "Signature", Text = "Signature" },
+                            new { Value = "Latest", Text = "Latest" },
+                            new { Value = "Oldest", Text = "Oldest" }
+                            // Add more options as needed
+                        }, "Value", "Text"), new { id = "sortOptionDropdown", onchange = "submitForm()" })
+                    }
+                </div>
+            </div>
+            <div class="row">
+                @foreach (var item in Model)
+                    {
+
+@if (item.IsEnabled!.Contains("Free")) {
+                    <div class="col-md-3">
+                        <div class="wsk-cp-product">
+                            <div class="wsk-cp-img">
+                                @if (item.IsEnabled.Contains("Signature"))
+                                    {
+                                    <span class="badge bg-warning">Signature</span>
+                                    }
+                                <img src="~/@item.Images" alt="Product" class="img-responsive" />
+                            </div>
+                            <div class="wsk-cp-text">
+                                <div class="title-product">
+                                    <h5>@item.RecipeName</h5>
+
+                                </div>
+                                <div class="description-prod">
+                                    <p>@item.Ingredients</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#recipeModal_@item.RecipeId">Read more to see full recipe</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recipe Modal -->
+                        <div class="modal fade" id="recipeModal_@item.RecipeId" tabindex="-1" role="dialog" aria-labelledby="recipeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="recipeModalLabel">@item.RecipeName</h5>
+
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Display full recipe details here -->
+                                        <p><i class="model-text">Name:</i> @item.RecipeName</p>
+                                        <img src="~/@item.Images" width="150" class="p-2" />
+                                        <p><i class="model-text">Ingredients:</i> @item.Ingredients</p>
+                                        <p><i class="model-text">Making Process:</i> @item.Procedure</p>
+                                        <a asp-controller="Home" asp-action="ExportToExcel" asp-route-recipeId="@item.RecipeId" class="btn btn-primary">Export to Excel</a>
+
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    }
+                    }
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+<script>function submitForm() {
+        document.getElementById("recipeForm").submit();
+    }</script>

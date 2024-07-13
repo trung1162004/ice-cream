@@ -1,0 +1,64 @@
+﻿@model Project.Models.Recipe
+
+@{
+    ViewData["Title"] = "Add Recipe";
+}
+ 
+<div class="shell">
+    <div class="update-page">
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success" role="alert">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+
+    </div>
+    <div class="btn-group btn-breadcrumb">
+        <a asp-action="Index" asp-controller="Home" class="btn btn-default"><i class="fas fa-home"></i></a>
+        <a asp-action="AddRecipe" asp-controller="Home" class="btn btn-default">Add Recipe</a>
+    </div>
+
+    <div class="container text-center mb-3">
+
+        <span class="span-p">
+            We glad to recieve your own recipes
+        </span>
+
+
+    </div>
+
+    <p>@ViewBag.msg</p>
+    <hr />
+    <div class="row">
+        <form class="contact-form" asp-action="AddRecipe" asp-controller="Home" enctype="multipart/form-data">
+            <input type="hidden" asp-for="UserId" value="@Context.Session.GetString("uid")" />
+            <label asp-for="RecipeName" class="control-label"></label>
+            <input asp-for="RecipeName" class="contact-input" />
+            <span asp-validation-for="RecipeName" class="text-danger"></span>
+
+            <label asp-for="Images" class="control-label"></label>
+            <input type="file" name="file" class="contact-input" multiple />
+
+            <label asp-for="Ingredients" class="control-label"></label>
+            <textarea asp-for="Ingredients" class="contact-input"></textarea>
+            <span asp-validation-for="Ingredients" class="text-danger"></span>
+
+            <label asp-for="Procedure" class="control-label"></label>
+            <textarea asp-for="Procedure" class="contact-input"></textarea>
+            <span asp-validation-for="Procedure" class="text-danger"></span>
+
+            <label class="control-label">Your Name & Email</label>
+            <input asp-for="IsEnabled" class="contact-input" />
+            <span asp-validation-for="IsEnabled" class="text-danger"></span>
+
+            <label asp-for="Date" class="control-label"></label>
+            <input type="text" class="contact-input" asp-for="Date" value="@DateTime.Now.Date" placeholder="The submit date" readonly>
+            <input type="submit" value="Create" class="submit-btn-css" />
+        </form>
+    </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+}

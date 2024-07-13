@@ -1,0 +1,73 @@
+@model Project.Models.ViewModels.SignInViewModel
+
+@{
+    ViewData["Title"] = "Sign In";
+}
+
+<header>
+    <link rel="stylesheet" href="~/css/login.css" />
+</header>
+<body>
+   
+    <div class="shell">
+        @if (ViewBag.ConfirmEmailMessage != null)
+        {
+            <div class="alert alert-info">
+                @ViewBag.ConfirmEmailMessage
+            </div>
+        }
+        <section class="vh-100 login-bg">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100 text-light">
+                    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <div class="card shadow-2-strong bg-secondary p-2 text-dark bg-opacity-50" style="border-radius: 1rem;">
+                            <div class="card-body p-5 ">
+
+                                <h3 class="mb-4 text-center text-light login-text">Sign in</h3>
+                                <form asp-action="Login" class="needs-validation">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                    <div class="form-outline mb-4 text-light">
+                                        <label class="form-label" asp-for="Email">Email</label>
+                                        <input asp-for="Email" class="form-control form-control-lg" placeholder="Your Email" required />
+
+                                        <div class="invalid-feedback text-light">
+                                            Please enter your email.
+                                        </div>
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="form-outline mb-4 text-light">
+                                        <label class="form-label" asp-for="Password">Password</label>
+                                        <input asp-for="Password" type="password" class="form-control form-control-lg" placeholder="Your Password" required />
+
+                                        <div class="invalid-feedback">
+                                            Please enter your password.
+                                        </div>
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+
+                                    <!-- Checkbox -->
+                                    <div class="form-check d-flex justify-content-start mb-4 text-light">
+                                        <input class="form-check-input" type="checkbox" asp-for="RememberMe" />
+                                        <label class="form-check-label" asp-for="RememberMe">Remember me</label>
+                                    </div>
+                                    <div class="text-center">
+
+                                        <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+
+                                        <hr class="my-4 text-light">
+                                      
+                                    </div>
+                                    <p class="text-light text-center">Don't have an account? <a asp-controller="User" asp-action="Register">Sign Up</a></p>
+                                    <p class="text-light text-center">Forgot Password? <a asp-controller="User" asp-action="ForgotPassword">Forgot Password</a></p>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</body>

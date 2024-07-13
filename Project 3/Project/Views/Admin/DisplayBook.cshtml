@@ -1,0 +1,74 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+
+@model X.PagedList.IPagedList<Project.Models.Book>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutAdmin";
+}
+
+
+<header>
+    <link rel="stylesheet" href="~/css/AdminRecipe.css" />
+</header>
+<h1 class="tieude">List Ice Cream Recipe Of Admin</h1>
+<br />
+<div class="search-create-container">
+    <form class="search-form" asp-action="DisplayBook" asp-controller="Admin" method="get">
+        <input type="text" name="bookName" class="search-input" placeholder="Enter book name..." />
+        <input type="submit" value="Search" class="search-button" />
+    </form>
+    <div class="create">
+        <a asp-action="CreateBook">Create New Book</a>
+    </div>
+</div>
+<p>@ViewBag.msg</p>
+<table class="table">
+    <thead>
+        <tr>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Images
+            </th>
+            <th>
+                Prices
+            </th>
+            <th>
+                Discount
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    <img src="~/@item.Images" width="120" />
+                </td>
+                <td>
+                    $@Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    $@Html.DisplayFor(modelItem => item.Discount)
+                </td>
+                <td class="action-buttons-container">
+                    <a class="update-button" href="@Url.Action("UpdateBook","Admin", new { Slug = item.Slug })">Update</a>
+                    <a class="detail-button" href="@Url.Action("DetailBook","Admin", new { Slug = item.Slug })">Details</a>
+                    <a class="delete-button" href="@Url.Action("DeleteBook","Admin", new { BookID = item.BookId }) " onclick="return confirm('Are you sure you want to delete this book?')">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="pag">
+    @Html.PagedListPager(Model, page => Url.Action("DisplayBook", new { page, bookName = ViewBag.BookName }))
+
+</div>

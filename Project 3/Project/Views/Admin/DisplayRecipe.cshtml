@@ -1,0 +1,68 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+
+@model X.PagedList.IPagedList<Project.Models.Recipe>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_LayoutAdmin";
+}
+
+<header>
+    <link rel="stylesheet" href="~/css/AdminRecipe.css" />
+</header>
+<h1 class="tieude">List Ice Cream Recipe Of Admin</h1>
+<br />
+<div class="search-create-container">
+    <form class="search-form" asp-action="DisplayRecipe" asp-controller="Admin" method="get">
+        <input type="text" name="recipeName" class="search-input" placeholder="Enter recipe name..." />
+        <input type="submit" value="Search" class="search-button" />
+        <br/>
+        <div class="sort-container">
+        <label class="hearder" for="sortOrder">Sort By:</label>
+        <select name="sortOrder" id="sortOrder" onchange="this.form.submit()">
+            <option value="">-- Select --</option>
+            <option value="Free">Free</option>
+            <option value="Free Signature">Free Signature</option>
+            <option value="Signature">Signature</option>
+        </select>
+        </div>
+    </form>
+    <div class="create">
+        <a asp-action="CreateRecipe">Create New Recipe</a>
+    </div>
+
+</div>
+<p>@ViewBag.msg</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                RecipeName
+            </th>
+            <th>
+                Images
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RecipeName)
+                </td>
+                <td>
+                    <img src="~/@item.Images" width="120" />
+                </td>
+                <td class="action-buttons-container">
+                    <a class="update-button" href="@Url.Action("UpdateRecipe","Admin", new { RecipeID = item.RecipeId })">Update</a>
+                    <a class="detail-button" href="@Url.Action("DetailRecipe","Admin", new { RecipeID = item.RecipeId })">Details</a>
+                    <a class="delete-button" href="@Url.Action("DeleteRecipe","Admin", new { RecipeID = item.RecipeId })" onclick="return confirm('Are you sure you want to delete this recipe?')">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="pag">
+    @Html.PagedListPager(Model, page => Url.Action("DisplayRecipe", new { page, recipeName = ViewBag.RecipeName }))
+</div>

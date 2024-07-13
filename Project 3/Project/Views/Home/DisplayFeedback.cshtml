@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Project.Models.Feedback>
+
+@{
+    ViewData["Title"] = "Display Feedback";
+}
+<header>
+    <link rel="stylesheet" href="~/css/feedback2.css" />
+</header>
+<body>
+    <div class="shell">
+    <div class="btn-group btn-breadcrumb">
+        <a asp-action="Index" asp-controller="Home" class="btn btn-default"><i class="fas fa-home"></i></a>
+        <a asp-action="DisplayFeedback" asp-controller="Home" class="btn btn-default">Feedback</a>
+      
+    </div>
+    <section class="testimonial text-center mt-2">
+        <div class="container">
+
+            <div class="heading white-heading">
+                Feedbacks
+            </div>
+
+            <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-bs-ride="carousel" data-bs-pause="hover" data-bs-interval="5000" data-bs-duration="2000">
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="testimonial4_slide">
+                            <img src="https://i.pinimg.com/474x/ff/32/56/ff3256978cd81cb519d48aa4ac67baab.jpg" class="img-fluid rounded-circle">
+                            <h3 class="tes-name">Mr.John</h3>
+                            <p class="tes-text">
+                                "Welcome to our feedback page!! click the button below if you wanna feedback about us"
+                            </p>
+                            <a class="tes-a" asp-action="Feedback" asp-controller="Home">Make your own feedback right here now!!!</a>
+                        </div>
+                    </div>
+                    @foreach (var item in Model)
+                    {
+                        <div class="carousel-item">
+                            <div class="testimonial4_slide">
+                                <img src="https://i.pinimg.com/564x/65/1c/6d/651c6da502353948bdc929f02da2b8e0.jpg" class="img-fluid rounded-circle">
+                                <h3 class="tes-name">@item.Name</h3>
+
+
+                                <p class="tes-text">
+                                    "@item.FeedbackText"
+                                </p>
+                                <a class="tes-a" asp-action="Feedback" asp-controller="Home">Make your own feedback right here now!!!</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonial4" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonial4" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+</body>
+     

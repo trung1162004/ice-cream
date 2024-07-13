@@ -1,0 +1,136 @@
+﻿@using X.PagedList
+@using X.PagedList.Mvc.Core
+
+@model X.PagedList.IPagedList<Project.Models.Book>
+
+
+@{
+    ViewData["Title"] = "Book";
+}
+<div class="shell">
+    <div class="update-page">
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success" role="alert">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+
+    </div>
+    <div class="btn-group btn-breadcrumb">
+        <a asp-action="Index" asp-controller="Home" class="btn btn-default"><i class="fas fa-home"></i></a>
+        <a asp-action="Book" asp-controller="Book" class="btn btn-default">Book</a>
+    </div>
+
+    <div class="container text-center mb-3">
+
+        <span class="span-p">
+            Welcome to our book store!
+        </span>
+
+
+    </div>
+    <div class="page-main-wrapper ">
+        <div class="container">
+            <div class="flex-grow-1">
+                <form method="get" class="search-form" action="@Url.Action("Book")">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" name="searchName" id="searchName" class="form-control search-input" placeholder="Enter book name..." />
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary search-button">Search</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="row">
+                <!-- product main wrap start -->
+                <div class="col-lg-12 order-1 order-lg-2">
+                    <!-- product view wrapper area start -->
+                    <div class="shop-product-wrapper pt-34">
+                        <div class="product-list">
+                            <div class="row">
+                                @if (Model.Any())
+                                {
+                                    @foreach (var item in Model)
+                                    {
+                                        <div class="col-lg-3 col-md-4 col-sm-6">
+                                            <div class="product-item fix">
+                                                <div class="product-thumb">
+                                                    <p>
+                                                        <img src="~/@item.Images"
+                                                             class="img-@item.BookId" alt="" width="100%"
+                                                             height="300px">
+                                                    </p>
+                                                    @if (item.Discount != null)
+                                                    {
+                                                        <div class="product-label">
+                                                            <span>Sale</span>
+                                                        </div>
+                                                    }
+                                                    <div class="product-action-link">
+                                                        <a asp-action="BookDetail" asp-route-slug="@item.Slug">
+                                                            <span data-toggle="tooltip" data-placement="left"
+                                                                  title="Quick view">
+                                                                <i class="fa fa-search"></i>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                    @if (item.Quantity > 0)
+                                                    {
+                                                        <div class="add-cart">
+                                                            <a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@item.BookId">
+                                                                + Add to Cart
+                                                            </a>
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="add-cart">
+                                                            <a>Out of Stock</a>
+
+                                                        </div>
+                                                    }
+
+                                                </div>
+                                                <div class="product-content">
+                                                    <h4>@item.Name</h4>
+
+                                                    <div class="pricebox">
+                                                        @if (item.Discount != null)
+                                                        {
+                                                            <span class="regular-price"> $@item.Discount </span>
+                                                            <span class="old-price"><del> $@item.Price </del></span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span class="regular-price"> $@item.Price </span>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="col-12" style="margin-top:20px">
+                                        <h2>No products found.</h2>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="pag">
+                            @Html.PagedListPager(Model, page => Url.Action("Book", new { page, pagedBooks = ViewBag.PagedBooks }))
+                        </div>
+                        <!-- page wrapper end -->
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>

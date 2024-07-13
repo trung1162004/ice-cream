@@ -1,0 +1,123 @@
+@model Project.Models.ViewModels.UpdateProfileViewModel
+@{
+    ViewData["Title"] = "Update profile";
+}
+<body>
+
+<div class="shell">
+    <div class="container">
+        <div class="update-page">
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success" role="alert">
+                    @TempData["SuccessMessage"]
+                </div>
+            }
+
+        </div>
+        <section style="background-color: #eee;">
+            <div class="container py-5">
+
+
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+                                     class="rounded-circle img-fluid" style="width: 150px;">
+
+                                <h5 class="my-3">User Detail Page</h5>
+
+                                <div class="d-flex justify-content-center mb-2">
+                                    <a asp-action="OrderTracking" asp-controller="Home" type="button" class="btn btn-primary">Order Tracking</a>
+                                    <a asp-action="ChangePassword" asp-controller="User" type="button" class="btn btn-outline-primary ms-1">Change Password</a>
+
+                                    <a asp-action="ViewPackage" asp-controller="Package" type="button" class="btn btn-outline-primary ms-1">View Package</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-4 mb-lg-0">
+                            <div class="card-body p-0">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <form asp-action="Profile">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="row gutters">
+                                <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <div class="row gutters">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                    <h6 class="mb-2 text-primary">Personal Details</h6>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                    <div class="form-group">
+                                                        <label asp-for="UserName"></label>
+                                                        <input asp-for="UserName" class="form-control" readonly/>
+                                                        <span asp-validation-for="UserName" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                    <div class="form-group">
+                                                        <label asp-for="FullName"></label>
+                                                        <input asp-for="FullName" class="form-control" />
+                                                        <span asp-validation-for="FullName" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                    <div class="form-group">
+                                                        <label asp-for="Email"></label>
+                                                        <input asp-for="Email" class="form-control" />
+                                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                    <div class="form-group">
+                                                        <label asp-for="PhoneNumber"></label>
+                                                        <input asp-for="PhoneNumber" class="form-control" />
+                                                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row gutters">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                    <label asp-for="BirthDay"></label>
+                                                    <input asp-for="BirthDay" class="form-control" type="date" />
+                                                    <span asp-validation-for="BirthDay" class="text-danger"></span>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                    <label asp-for="Gender"></label>
+                                                    <select asp-for="Gender" class="form-control"
+                                                            asp-items="Html.GetEnumSelectList<Gender>()"></select>
+                                                    <span asp-validation-for="Gender" class="text-danger"></span>
+                                                </div>
+                                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                        <label asp-for="Address"></label>
+                                                        <input asp-for="Address" class="form-control" />
+                                                        <span asp-validation-for="Address" class="text-danger"></span>
+                                                    </div>
+                                            </div>
+                                            <div class="row gutters">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                    <div class="text-center mt-3">
+                                                        <button type="submit" class="btn btn-primary">Update</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+        </section>
+
+</body>

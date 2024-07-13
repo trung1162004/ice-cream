@@ -1,0 +1,122 @@
+﻿@model IEnumerable<Project.Models.Book>
+
+@{
+    ViewData["Title"] = "ViewCart";
+}
+
+<div class="shell">
+<div class="shopping-card spad">
+    <div class="container">
+        <div class="row">
+            @if (ViewBag.cart != null && ViewBag.cart.Count > 0)
+            {               
+                <div class="col-lg-12">
+                    @{
+                        decimal total = 0;
+                    }
+                    <div class="cart-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th class="p-name">Book Name</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (ViewBag.cart != null && ViewBag.cart.Count > 0)
+                                {
+                                    foreach (var item in ViewBag.cart)
+                                    {
+                                        <tr>
+                                            <td class="cart-pic first-row">
+                                                <img src="~/@item.Book.Images" alt="@item.Book.Name" style="width:140px;height:auto;">
+                                            </td>
+                                            <td class="cart-title first-row">
+                                                <h5>@item.Book.Name</h5>
+                                            </td>
+                                            @if (item.Book.Discount != null)
+                                            {
+                                                <td class="p-price first-row">$@(item.Book.Discount)</td>
+                                            }
+                                            else
+                                            {
+                                                <td class="p-price first-row">$@(item.Book.Price)</td>
+                                            }
+                                        <td class="qua-col first-row">
+                                            <div class="quantity">
+                                                <div class="pro-qty">
+                                                    <input type="text" value="@item.Quantity" data-pid="@item.Book.BookId" class="quantity-input" step="1" min="1" max="@item.Book.Quantity">
+                                                </div>
+
+                                            </div>
+                                            <div>
+                                                @if (item.Quantity >= item.Book.Quantity)
+                                                {
+                                                    <span class="text-danger">Maximum stock reached</span>
+                                                }
+                                            </div>
+                                        </td>
+                                            @if (item.Book.Discount != null)
+                                            {
+                                                <td class="total-price first-row">$@(item.Book.Discount * item.Quantity)</td>
+                                            }
+                                            else
+                                            {
+                                                <td class="total-price first-row">$@(item.Book.Price * item.Quantity)</td>
+                                            }
+                                        
+                                            @{
+                                                decimal subtotal;
+                                                if (item.Book.Discount != null)
+                                                {
+                                                    subtotal = item.Book.Discount * item.Quantity;
+                                                }
+                                                else
+                                                {
+                                                    subtotal = item.Book.Price * item.Quantity;
+                                                }
+                                                total += subtotal;
+                                            }
+                                            <td class="close-td first-row">
+                                                <a asp-action="Remove" asp-controller="Cart" asp-route-id="@item.Book.BookId"><i class="fa fa-times"></i></a>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="cart-buttons">
+                                <a asp-action="Book" asp-controller="Book" class="pri-btn ">Continue Shopping</a>
+                            </div>
+                        
+                        </div>
+                        <div class="col-lg-4 offset-lg-4">
+                            <div class="proceed-checkout">                           
+                                <ul>
+                                    <li class="subtotal">Subtotal <span>$@total</span></li>
+                                    <li class="cart-total">Total <span>$@total</span></li>
+                                </ul>                         
+                                <a href="@Url.Action("Checkout", "Checkout")" class="pri-btn proceed-btn">PROCEED TO CHECK OUT</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="cart-empty col-lg-12">
+                    <h5>There are no items in the shopping cart.</h5>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+                             

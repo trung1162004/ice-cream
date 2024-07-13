@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Project.Models.BookCombined>
+@{
+    ViewData["Title"] = "Home";
+    Layout = "_LayoutAdmin";
+}
+<header>
+    <link rel="stylesheet" href="~/css/AdminRecipe.css" />
+</header>
+<h1 class="tieude">Order Tracking</h1>
+<br />
+<form method="get" class="search-form" action="@Url.Action("BookTracking")">
+    <input type="text" name="searchName" id="searchName" class="search-input" placeholder="Enter name" />
+    <button type="submit" class="search-button">Search</button>
+</form>
+<div class="d-flex justify-content-between">
+    <div>
+        <a asp-controller="Admin" asp-action="ExportToExcelBook" class="btn btn-primary">Export to Excel</a>
+
+    </div>
+    <div></div>
+    <div>
+        <a asp-action="BookTracking" asp-route-sortOrder="@ViewData["DateSortParam"]" class="btn btn-primary">Sort by date</a>
+        <a asp-action="BookTracking" asp-route-sortOrder="@ViewData["NameSortParam"]" class="btn btn-primary">Sort by name</a>
+    </div>
+</div>
+<div class="text-center">
+
+    <table class="table">
+        <tr>
+            <th>User Name</th>
+            <th>User Email</th>
+            <th>Phone</th>
+            <th>Book Title</th>
+            <th>Image</th>
+            <th>Quantity</th>
+            <th>Total Money</th>
+            <th>Status</th>
+            <th>Action</th>
+
+
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Order!.Name</td>
+                <td>@item.Order!.Email</td>
+                <td>@item.Order!.Phone</td>
+                <td>@item.Book!.Name</td>
+                <td>@item.Book!.Images</td>
+                <td>@item.OrderItem!.Quantity</td>
+                <td>@item.OrderItem!.Total</td>
+                <td>
+                    @Html.DropDownListFor(modelItem => item.Order!.Status,
+               new SelectList(ViewBag.OrderStatuses, item.Order!.Status),
+               new { @class = "form-control", onchange = $"updateOrderStatus({item.Order!.OrderId}, this.value)" })
+                </td>
+                <td> <a class="detail-button" href="@Url.Action("OrderDetail","Admin", new { orderId = item.Order.OrderId })">Details</a></td>
+                
+            </tr>
+        }
+
+    </table>
+   
+</div>
+<script>function updateOrderStatus(orderId, newStatus) {
+        $.ajax({
+            type: "POST",
+            url: "/Admin/BookTracking",  // Replace with your actual controller action
+            data: { orderId: orderId, status: newStatus },
+            success: function (result) {
+                if (result.success) {
+                    console.log("Status updated successfully");
+                } else {
+                    console.error("Failed to update status: ", result.message);
+                }
+            },
+            error: function (error) {
+                console.error("An error occurred while updating status: ", error);
+            }
+        });
+    }</script>
+
+
